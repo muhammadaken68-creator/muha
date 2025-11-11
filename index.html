@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aurelia Estates — Luxury Real Estate</title>
+	<meta name="description" content="Discover premium properties with Aurelia Estates. Modern, luxurious, and professional real estate experiences for discerning clients.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='20' fill='%231a1a1a'/%3E%3Cpath d='M28 78L60 24l32 54' stroke='%23d4af37' stroke-width='8' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='60' cy='78' r='8' fill='%23d4af37'/%3E%3C/svg%3E">
+</head>
+<body>
+	<header class="header">
+		<div class="container nav">
+			<a href="#" class="brand">
+				<span class="brand-mark">A</span>
+				<span class="brand-name">Aurelia Estates</span>
+			</a>
+			<nav class="nav-menu" id="navMenu">
+				<a href="#listings">Listings</a>
+				<a href="#about">About</a>
+				<a href="#testimonials">Testimonials</a>
+				<a href="#contact">Contact</a>
+				<a href="#search" class="btn btn-gold btn-small">Find Property</a>
+			</nav>
+			<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+				<span></span><span></span><span></span>
+			</button>
+		</div>
+	</header>
+
+	<section class="hero" id="home">
+		<div class="hero-media" role="img" aria-label="Luxury property backdrop"></div>
+		<div class="hero-overlay"></div>
+		<div class="container hero-content">
+			<h1 class="display" data-animate="fade-up">Find Your Dream Property</h1>
+			<p class="subtitle" data-animate="fade-up" data-delay="100">Curated residences in the world’s most coveted addresses.</p>
+			<div class="hero-cta" data-animate="fade-up" data-delay="200">
+				<a href="#listings" class="btn btn-gold">View Listings</a>
+				<a href="#about" class="btn btn-outline">Learn More</a>
+			</div>
+			<div class="search-panel" id="search" data-animate="fade-in" data-delay="300">
+				<form class="search-form" id="searchForm">
+					<div class="field">
+						<label for="location">Location</label>
+						<input type="text" id="location" placeholder="Dubai, London, Malibu...">
+					</div>
+					<div class="field">
+						<label for="type">Property Type</label>
+						<select id="type">
+							<option value="">Any</option>
+							<option value="villa">Villa</option>
+							<option value="apartment">Apartment</option>
+							<option value="penthouse">Penthouse</option>
+						</select>
+					</div>
+					<div class="field">
+						<label for="price">Max Price</label>
+						<select id="price">
+							<option value="">No Limit</option>
+							<option value="2000000">Up to $2,000,000</option>
+							<option value="5000000">Up to $5,000,000</option>
+							<option value="10000000">Up to $10,000,000</option>
+						</select>
+					</div>
+					<button class="btn btn-gold" type="submit">Search</button>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<section class="section" id="listings">
+		<div class="container">
+			<div class="section-head">
+				<h2 class="title" data-animate="fade-up">Featured Listings</h2>
+				<p class="lead" data-animate="fade-up" data-delay="100">A selection of premium properties handpicked by our experts.</p>
+			</div>
+			<div class="grid listings">
+				<article class="card property" data-location="Dubai" data-type="penthouse" data-price="7500000" data-animate="fade-in">
+					<div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1974&auto=format&fit=crop');"></div>
+					<div class="card-content">
+						<h3>Palm Jumeirah Penthouse</h3>
+						<p class="muted">Dubai, UAE</p>
+						<div class="meta">
+							<span>$7,500,000</span>
+							<span>4 Beds • 5 Baths • 6,200 sqft</span>
+						</div>
+					</div>
+				</article>
+				<article class="card property" data-location="Malibu" data-type="villa" data-price="9800000" data-animate="fade-in" data-delay="50">
+					<div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=2069&auto=format&fit=crop');"></div>
+					<div class="card-content">
+						<h3>Beachfront Glass Villa</h3>
+						<p class="muted">Malibu, USA</p>
+						<div class="meta">
+							<span>$9,800,000</span>
+							<span>5 Beds • 6 Baths • 7,500 sqft</span>
+						</div>
+					</div>
+				</article>
+				<article class="card property" data-location="London" data-type="apartment" data-price="3200000" data-animate="fade-in" data-delay="100">
+					<div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?q=80&w=1974&auto=format&fit=crop');"></div>
+					<div class="card-content">
+						<h3>Mayfair Park Residence</h3>
+						<p class="muted">London, UK</p>
+						<div class="meta">
+							<span>$3,200,000</span>
+							<span>3 Beds • 3 Baths • 2,300 sqft</span>
+						</div>
+					</div>
+				</article>
+				<article class="card property" data-location="Singapore" data-type="penthouse" data-price="6400000" data-animate="fade-in" data-delay="150">
+					<div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1505692952047-1a78307da8f2?q=80&w=1974&auto=format&fit=crop');"></div>
+					<div class="card-content">
+						<h3>Marina Bay Skyline Penthouse</h3>
+						<p class="muted">Singapore</p>
+						<div class="meta">
+							<span>$6,400,000</span>
+							<span>4 Beds • 4 Baths • 3,800 sqft</span>
+						</div>
+					</div>
+				</article>
+				<article class="card property" data-location="Paris" data-type="apartment" data-price="2800000" data-animate="fade-in" data-delay="200">
+					<div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=2070&auto=format&fit=crop');"></div>
+					<div class="card-content">
+						<h3>Seine Riverfront Apartment</h3>
+						<p class="muted">Paris, France</p>
+						<div class="meta">
+							<span>$2,800,000</span>
+							<span>2 Beds • 2 Baths • 1,500 sqft</span>
+						</div>
+					</div>
+				</article>
+				<article class="card property" data-location="Sydney" data-type="villa" data-price="5600000" data-animate="fade-in" data-delay="250">
+					<div class="card-media" style="background-image:url('https://images.unsplash.com/photo-1515263487990-61b07816b324?q=80&w=1974&auto=format&fit=crop');"></div>
+					<div class="card-content">
+						<h3>Harbour View Residence</h3>
+						<p class="muted">Sydney, Australia</p>
+						<div class="meta">
+							<span>$5,600,000</span>
+							<span>4 Beds • 4 Baths • 4,200 sqft</span>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section class="section alt" id="about">
+		<div class="container about">
+			<div class="about-text" data-animate="fade-up">
+				<h2 class="title">About Aurelia Estates</h2>
+				<p class="lead">We curate, market, and negotiate exceptional properties for an international clientele.</p>
+				<p>With decades of combined experience across luxury markets, our advisors deliver discreet, end‑to‑end service—from private previews to white‑glove closings. Our portfolio spans waterfront villas, sky‑high penthouses, and architect‑designed residences in world capitals.</p>
+				<ul class="ticks">
+					<li>Global network and off‑market access</li>
+					<li>Bespoke marketing and photography</li>
+					<li>Data‑driven valuations and insights</li>
+				</ul>
+			</div>
+			<div class="about-media" data-animate="fade-in" data-delay="100">
+				<div class="about-photo" style="background-image:url('https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2070&auto=format&fit=crop');"></div>
+				<div class="about-badge">
+					<span class="badge-mark">20+</span>
+					<span class="badge-text">Years of Excellence</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section" id="testimonials">
+		<div class="container">
+			<div class="section-head">
+				<h2 class="title" data-animate="fade-up">What Clients Say</h2>
+				<p class="lead" data-animate="fade-up" data-delay="100">Trusted by discerning buyers, sellers, and developers worldwide.</p>
+			</div>
+			<div class="slider" data-animate="fade-in" data-delay="150">
+				<div class="slides">
+					<blockquote class="slide">
+						<p>Exquisite service and unmatched market knowledge. Our sale closed above asking within a week.</p>
+						<footer>— Charlotte M., London</footer>
+					</blockquote>
+					<blockquote class="slide">
+						<p>They secured an off‑market penthouse with a breathtaking view. Seamless from start to finish.</p>
+						<footer>— Omar A., Dubai</footer>
+					</blockquote>
+					<blockquote class="slide">
+						<p>World‑class marketing—our villa looked like a magazine cover. Highly recommended.</p>
+						<footer>— Isabella R., Marbella</footer>
+					</blockquote>
+				</div>
+				<div class="slider-controls">
+					<button class="slider-btn prev" aria-label="Previous testimonial">‹</button>
+					<button class="slider-btn next" aria-label="Next testimonial">›</button>
+				</div>
+			</div>
+			<div class="partners" data-animate="fade-up" data-delay="200">
+				<img alt="Partner" src="https://dummyimage.com/140x40/1a1a1a/ffffff&text=SOHO">
+				<img alt="Partner" src="https://dummyimage.com/140x40/1a1a1a/ffffff&text=SKYLINE">
+				<img alt="Partner" src="https://dummyimage.com/140x40/1a1a1a/ffffff&text=URBANA">
+				<img alt="Partner" src="https://dummyimage.com/140x40/1a1a1a/ffffff&text=MARINA">
+				<img alt="Partner" src="https://dummyimage.com/140x40/1a1a1a/ffffff&text=LEGACY">
+			</div>
+		</div>
+	</section>
+
+	<section class="section contact" id="contact">
+		<div class="container contact-grid">
+			<div class="contact-info" data-animate="fade-up">
+				<h2 class="title">Schedule a Viewing</h2>
+				<p class="lead">Let our advisors arrange a private tour tailored to your preferences.</p>
+				<ul class="contact-list">
+					<li><strong>Email:</strong> concierge@aureliaestates.com</li>
+					<li><strong>Phone:</strong> +1 (310) 555‑0199</li>
+					<li><strong>Address:</strong> 88 Kingsway, London WC2</li>
+				</ul>
+				<form class="contact-form" id="contactForm" novalidate>
+					<div class="field">
+						<label for="name">Full Name</label>
+						<input id="name" type="text" required placeholder="Jane Doe">
+					</div>
+					<div class="field">
+						<label for="email">Email</label>
+						<input id="email" type="email" required placeholder="jane@example.com">
+					</div>
+					<div class="field">
+						<label for="message">Message</label>
+						<textarea id="message" rows="4" placeholder="I’d like to view the Palm Jumeirah Penthouse..."></textarea>
+					</div>
+					<button class="btn btn-gold" type="submit">Request Viewing</button>
+					<p class="form-status" id="formStatus" aria-live="polite"></p>
+				</form>
+			</div>
+			<div class="map" data-animate="fade-in" data-delay="100">
+				<iframe title="Aurelia Estates Office" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19801.639324193722!2d-0.1313114!3d51.5116579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876052659c9b06b%3A0xdaa7b7f2d7d2e3c8!2sMayfair%2C%20London!5e0!3m2!1sen!2suk!4v1699977777777"></iframe>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container footer-grid">
+			<div>
+				<a href="#" class="brand brand-footer">
+					<span class="brand-mark">A</span>
+					<span class="brand-name">Aurelia Estates</span>
+				</a>
+				<p class="muted">Exclusive, trustworthy, elegant, and contemporary property advisory.</p>
+			</div>
+			<div class="footer-links">
+				<a href="#listings">Listings</a>
+				<a href="#about">About</a>
+				<a href="#testimonials">Testimonials</a>
+				<a href="#contact">Contact</a>
+			</div>
+			<div class="footer-cta">
+				<a href="#search" class="btn btn-gold btn-small">Find Property</a>
+			</div>
+		</div>
+		<div class="container footer-bottom">
+			<p>© <span id="year"></span> Aurelia Estates. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+</html>
+
+
